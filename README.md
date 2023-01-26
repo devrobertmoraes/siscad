@@ -1,4 +1,4 @@
-# SisCad
+# SisCad 2.0
 ## Sistema de cadastro - Primeiro projeto utilizando a linguagem PHP
 
 ### Descrição
