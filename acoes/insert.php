@@ -6,7 +6,7 @@ if (count($_POST) > 0) {
     $endereco = htmlspecialchars($_POST["endereco"], ENT_HTML5);
     $rg = htmlspecialchars($_POST["rg"], ENT_HTML5);
     $cpf = htmlspecialchars($_POST["cpf"], ENT_HTML5);
-    $senha = htmlspecialchars($_POST["senha"], ENT_HTML5);
+    $senha = password_hash(htmlspecialchars($_POST["senha"], ENT_HTML5), PASSWORD_DEFAULT);
     $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
 } else {
     header("Location: ../cadastro.php");
