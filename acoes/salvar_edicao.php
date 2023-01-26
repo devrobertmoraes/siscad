@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 require_once("conexao.php");
 
 if (count($_POST) > 0) {
@@ -6,7 +8,7 @@ if (count($_POST) > 0) {
     $nome = $_POST["nome"];
     $endereco = $_POST["endereco"];
     $email = $_POST["email"];
-    $senha = $_POST["senha"];
+    $senha = password_hash($_POST["senha"], PASSWORD_DEFAULT);
     $rg = $_POST["rg"];
     $cpf = $_POST["cpf"];
 
@@ -29,6 +31,8 @@ if (count($_POST) > 0) {
     $cliente_login->bindParam(":id", $id, PDO::PARAM_INT);
     $cliente_login->execute();
 
-    header("Location: ../cliente_data.php");
+    session_destroy();
+    
+    header("Location: ../login.php");
 }
 

@@ -16,6 +16,8 @@ if (!empty($_GET["id"])) {
     $stmt->bindParam(":id_cliente", $id, PDO::PARAM_INT);
     $stmt->execute();
     $dados = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    $dados["senha"] = $_SESSION["senha"];
 }
 ?>
 
@@ -65,7 +67,7 @@ if (!empty($_GET["id"])) {
                         </label>
                         <label>
                             Senha<br />
-                            <input value="<?= isset($dados["senha"]) ? $dados["senha"] : "";?>" type="password" required name="senha">
+                            <input value="<?= isset($dados["senha"]) ? $dados["senha"] : "";?>" type="text" required name="senha">
                         </label>
                         <input type="hidden" name="id" value="<?=$id?>">
                 </div>
