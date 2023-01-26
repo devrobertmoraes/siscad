@@ -1,31 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <title>SisCad | Home</title>
-</head>
-<body>
-    <header>
-            <div class="logo">
-                <span class="purple-letter">S</span>is<span class="purple-letter">C</span>ad
-            </div>
-    </header>
+<?php
+include_once("partials/header.html.php");
+include_once("helpers/urlBase.php");
+?>
 
-    <main>
-        <div class="main-box">
-            <h1><span class="main-before-1">Bem</span> vindo ao <span class="main-after-1">SisCad!</span></h1>
-            <h2>Acesse a sua conta ou cadastre-se para ter acesso:</h2>
-            <div class="main-links">
-                <a href="login.php">Login</a>
-                <a href="cadastro.php">Cadastre-se</a>
-            </div>
+<main class="index">
+    <div class="index-main-conteudo">
+        <h1>Bem vindo ao SisCad<span class="purple-letter">!</span></h1>
+        <p>
+            Um sistema de cadastro que foi pensado para que você tenha praticidade na hora de gerir os dados dos seus clientes<span class="purple-letter">.</span>
+        </p>
+        <h2>Acesse a sua conta ou cadastre-se para ter acesso<span class="purple-letter">:</span></h2>
+        <div class="button-group">
+            <a class="button light" href="cadastro.php">Cadastrar</a>
+            <a class="button light" href="login.php">Login</a>
         </div>
-    </main>
+    </div>
+    <img src="<?= $BASE_URL ?>assets/img/telaInicial.svg" alt="">
+</main>
 
-    <footer>SisCad - Todos os direitos reservados<div>Robert Moraes <span class="purple-letter">2023</span></div></footer>
-</body>
-</html>
+<?php
+include_once("partials/footer.html.php");
+
+echo "$BASE_URL";
+?>
+

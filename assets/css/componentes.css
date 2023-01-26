@@ -1,0 +1,56 @@
+.button {
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 1.125rem;
+    padding: 15px;
+    display: inline-block;
+    background-color: #29292e;
+    /* border: 2px solid #202024; */
+    border: 2px solid #6a38d5;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #8557e6;
+}
+
+.button.light {
+    background-color: transparent;
+    color: #6a38d5;
+}
+
+.button.light:hover {
+    background-color: #8557e6;
+    color: #fff;
+}
+
+.button.logout {
+    background-color: #6a38d5;
+    color: #FFF;
+}
+
+.button.logout:hover {
+    background-color: #FFF;
+    color: #8557e6;
+}
+
+.purple-letter {
+    color: #8557E6;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+    .button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
